@@ -41,14 +41,15 @@ Note that if you update Xcode you may need to run these commands again.
 
 ### Xcode
 
+(don't worry about error message)
+
 ```sh
-xcodebuild clean build
+xcodebuild clean build 
 ```
 
 ### CMake
 
 ```sh
-mkdir build
 cd build
 cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE=../cmake/iphoneos.toolchain.cmake ..
 make -j$(sysctl -n hw.logicalcpu)
